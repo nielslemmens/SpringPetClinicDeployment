@@ -1,0 +1,16 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: petclinic
+spec:
+  replicas: 4
+  template:
+    metadata:
+      labels:
+        app: maven
+    spec:
+      containers:
+      - name: petclinic
+        image: nielslemmens/spring-petclinic
+        ports:
+        - containerPort: 8080
