@@ -49,3 +49,12 @@ spec:
     protocol: TCP
   selector:
     k8s-app: nginx-ingress-lb
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nginx-ingress-controller
+data:
+  use-proxy-protocol: "true"
+  ssl-redirect: "false"
+
