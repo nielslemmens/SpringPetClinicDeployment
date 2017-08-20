@@ -1,6 +1,7 @@
-FROM maven:latest
+FROM alpine:latest
 EXPOSE 8080
 
+RUN apk --update add openjdk8-jre
 RUN mkdir -p /src/spring-petclinic
 COPY ./ /src/spring-petclinic
 WORKDIR /src/spring-petclinic
