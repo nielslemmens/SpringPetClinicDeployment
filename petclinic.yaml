@@ -40,6 +40,7 @@ metadata:
   namespace: production
   name: petclinic
 spec:
+  minReadySeconds: 20
   replicas: 2
   template:
     metadata:
