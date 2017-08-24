@@ -48,7 +48,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 @RunWith(SpringRunner.class)
 @DataJpaTest(includeFilters = @ComponentScan.Filter(Service.class))
-@AutoConfigureTestDatabase
+@AutoConfigureTestDatabase(replace=Replace.NONE)
 public class ClinicServiceTests {
 
     @Autowired
