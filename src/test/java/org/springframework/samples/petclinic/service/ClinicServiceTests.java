@@ -9,6 +9,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.samples.petclinic.owner.Owner;
 import org.springframework.samples.petclinic.owner.OwnerRepository;
@@ -22,6 +23,7 @@ import org.springframework.samples.petclinic.visit.VisitRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.transaction.annotation.Transactional;
+
 
 /**
  * Integration test of the Service and the Repository layer.
@@ -45,7 +47,6 @@ import org.springframework.transaction.annotation.Transactional;
  */
 
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes=MainApplication.java)
 @DataJpaTest(includeFilters = @ComponentScan.Filter(Service.class))
 @AutoConfigureTestDatabase(replace=Replace.NONE)
 public class ClinicServiceTests {
